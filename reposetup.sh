@@ -33,3 +33,6 @@ breakfast mido
 # Enable CCache
 # echo "export USE_CCACHE=1" >> ~/.bashrc
 # ~/android/lineage/prebuilts/misc/linux-x86/ccache/ccache -M 100G
+
+# Configure Jack
+# echo "export ANDROID_JACK_VM_ARGS=\"-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx12G\"" >> ~/.bashrc
