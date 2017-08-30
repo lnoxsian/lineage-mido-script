@@ -32,7 +32,9 @@ echo "    PATH=\"$HOME/bin:$PATH\"" >> ~/.profile
 echo "fi" >> ~/.profile
 source ~/.profile
 
-# Initialize Repo
+# Setup Git & Initialize Repo
+git config --global user.email "you@example.com"
+git config --global user.name "YourName"
 cd ~/android/lineage
 echo "4. Initializing Repo | $(date)"
 repo init -u https://github.com/LineageOS/android.git -b cm-14.1
