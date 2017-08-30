@@ -5,10 +5,10 @@ cd ~
 
 # Install Required Packages
 echo "1. Installing Require Packages | $(date)"
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
-sudo apt-get install openjdk-8-jdk
+yes | sudo apt-get update
+yes | sudo apt-get upgrade
+yes | sudo apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+yes | sudo apt-get install openjdk-8-jdk
 
 # Fetch Android Platform Tools and Repo and to profile
 echo "2. Installing Platform Tools & Repo Command| $(date)"
