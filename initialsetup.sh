@@ -17,6 +17,7 @@ echo "# add Android SDK platform tools to path" >> ~/.profile
 echo "if [ -d \"$HOME/platform-tools\" ] ; then" >> ~/.profile
 echo "    PATH=\"$HOME/platform-tools:$PATH\"" >> ~/.profile
 echo "fi" >> ~/.profile
+source ~/.profile
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 echo "# set PATH so it includes user's private bin if it exists" >> ~/.profile
