@@ -9,7 +9,7 @@ repo sync -j 16
 
 # Run Breakfast
 echo "2. Preparing device-specific code | $(date)"
-source build/envsetup.sh
+source ~/android/lineage/build/envsetup.sh
 breakfast mido
 
 # Add Local Manifest
@@ -27,6 +27,9 @@ repo sync -j 16
 
 # Run Breakfast
 echo "5. Preparing device-specific code | $(date)"
-source build/envsetup.sh
+source ~/android/lineage/build/envsetup.sh
 breakfast mido
 
+# Enable CCache
+# echo "export USE_CCACHE=1" >> ~/.bashrc
+# ~/android/lineage/prebuilts/misc/linux-x86/ccache/ccache -M 100G
