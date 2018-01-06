@@ -12,12 +12,11 @@ yes | sudo apt-get install openjdk-8-jdk
 yes | sudo apt-get install unzip
 
 # Create Directories
-echo "2. Creating Directories | $(date)"
+echo "Creating bin Directory | $(date)"
 mkdir -p ~/bin
-mkdir -p ~/android/lineage
 
 # Fetch Android Platform Tools and Repo and to profile
-echo "3. Installing Platform Tools & Repo Command| $(date)"
+echo "2. Installing Platform Tools & Repo Command| $(date)"
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip
 echo "# add Android SDK platform tools to path" >> ~/.profile
@@ -35,9 +34,6 @@ source ~/.profile
 # Setup Git & Initialize Repo
 git config --global user.email "you@example.com"
 git config --global user.name "YourName"
-cd ~/android/lineage
-echo "4. Initializing Repo | $(date)"
-yes | repo init -u https://github.com/LineageOS/android.git -b cm-14.1
 
 
 
