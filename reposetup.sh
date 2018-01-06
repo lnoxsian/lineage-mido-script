@@ -1,19 +1,24 @@
 #!/bin/bash
 
 # CD to Lineage Directory
+echo "Creating Lineage Directory"
+mkdir -p ~/android/lineage
 cd ~/android/lineage
 
+echo "1. Initializing Repo | $(date)"
+yes | repo init -u https://github.com/LineageOS/android.git -b cm-14.1
+
 # Sync Repo
-echo "1. Syncing Repo | $(date)"
+echo "2. Syncing Repo | $(date)"
 repo sync -j 16
 
 # Run Breakfast
-echo "2. Preparing device-specific code | $(date)"
+echo "3. Preparing device-specific code | $(date)"
 source ~/android/lineage/build/envsetup.sh
 breakfast mido
 
 # Add Local Manifest
-echo "3. Download Custom Local Manifest | $(date)"
+echo "4. Download Custom Local Manifest | $(date)"
 cd ~/android/lineage/.repo/local_manifests/
 rm roomservice.xml
 wget https://raw.githubusercontent.com/itsarjunsinh/lineage-mido-script/master/roomservice.xml
@@ -22,11 +27,11 @@ wget https://raw.githubusercontent.com/itsarjunsinh/lineage-mido-script/master/r
 cd ~/android/lineage
 
 # Sync Repo
-echo "4. Syncing Repo - Fetching Proprietary Files | $(date)"
+echo "5. Syncing Repo - Fetching Proprietary Files | $(date)"
 repo sync -j 16
 
 # Run Breakfast
-echo "5. Preparing device-specific code | $(date)"
+echo "6. Preparing device-specific code | $(date)"
 source ~/android/lineage/build/envsetup.sh
 breakfast mido
 
