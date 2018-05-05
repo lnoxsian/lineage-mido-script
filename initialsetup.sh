@@ -7,7 +7,7 @@ cd ~
 echo "1. Installing Required Packages | $(date)"
 yes | sudo apt-get update
 yes | sudo apt-get upgrade
-yes | sudo apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop m4 pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+yes | sudo apt-get install bc bison build-essential curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop m4 pngcrush repo rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
 yes | sudo apt-get install openjdk-8-jdk
 yes | sudo apt-get install unzip
 
@@ -23,17 +23,8 @@ echo "# add Android SDK platform tools to path" >> ~/.profile
 echo "if [ -d \"$HOME/platform-tools\" ] ; then" >> ~/.profile
 echo "    PATH=\"$HOME/platform-tools:$PATH\"" >> ~/.profile
 echo "fi" >> ~/.profile
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-chmod a+x ~/bin/repo
-echo "# set PATH so it includes user's private bin if it exists" >> ~/.profile
-echo "if [ -d \"$HOME/bin\" ] ; then" >> ~/.profile
-echo "    PATH=\"$HOME/bin:$PATH\"" >> ~/.profile
-echo "fi" >> ~/.profile
 source ~/.profile
 
 # Setup Git & Initialize Repo
 git config --global user.email "you@example.com"
 git config --global user.name "YourName"
-
-
-
