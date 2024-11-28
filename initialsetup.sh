@@ -17,8 +17,8 @@ mkdir -p ~/bin
 
 # Fetch repo tool
 echo "2. Installing Repo Tool"
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-chmod a+x ~/bin/repo
+curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo
+chmod a+x /usr/bin/repo
 
 # Fetch Android Platform Tools
 echo "3. Installing Platform Tools & Repo Command| $(date)"
