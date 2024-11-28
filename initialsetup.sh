@@ -15,8 +15,11 @@ yes | sudo apt-get install unzip
 echo "Creating bin Directory | $(date)"
 mkdir -p ~/bin
 
-# Fetch Android Platform Tools and Repo and to profile
-echo "2. Installing Platform Tools & Repo Command| $(date)"
+# Fetch repo tool
+echo 
+
+# Fetch Android Platform Tools
+echo "3. Installing Platform Tools & Repo Command| $(date)"
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip
 echo "# add Android SDK platform tools to path" >> ~/.profile
