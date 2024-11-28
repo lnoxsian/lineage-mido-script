@@ -16,7 +16,9 @@ echo "Creating bin Directory | $(date)"
 mkdir -p ~/bin
 
 # Fetch repo tool
-echo 
+echo "2. Installing Repo Tool"
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
 
 # Fetch Android Platform Tools
 echo "3. Installing Platform Tools & Repo Command| $(date)"
